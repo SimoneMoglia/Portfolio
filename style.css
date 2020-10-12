@@ -250,7 +250,7 @@ input:-webkit-autofill:focus {
     }
 
     .lavori-content {
-      background: linear-gradient(120deg, rgba(246,211,101,0.8) 0%, rgba(253,160,133,0.8) 100%);
+      background: linear-gradient(120deg, rgba(246,211,101,0.9) 0%, rgba(253,160,133,0.9) 100%);
       opacity: 1;
     }
 
