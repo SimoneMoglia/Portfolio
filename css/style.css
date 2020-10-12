@@ -113,23 +113,33 @@
   width: 40%;
   margin: 2% 1%;
   height: 40%;
-  border: 1px solid #EAEAEA;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 1.5px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 #lavoro1-img,
 #lavoro2-img {
-  background: url("../images/prova.jpg") #FFF no-repeat center;
+  background: url("../images/prova.jpg") no-repeat center;
   background-size: cover;
   height: 100%;
+  border-radius: 2px;
 }
 
 .lavori-content {
+  border-radius: 2px;
+  opacity: 0;
   background: linear-gradient(120deg, rgba(246,211,101,0.9) 0%, rgba(253,160,133,0.9) 100%);
+  transition: 0.3s opacity ease-in-out;
   height: 100%;
   color: #37474F;
-  opacity: 0;
-  transition: 0.3s opacity ease-in-out;
   padding: 6% 4%;
+}
+
+.lavori-content h2,
+.lavori-content h4,
+.lavori-content p {
+  opacity: 1;
 }
 
 .lavori-content h2 {
@@ -137,26 +147,12 @@
   text-align: center;
 }
 
-
 .lavori-content h4 {
   font-weight: 500;
   text-align: center;
 }
 
 .lavori-card:hover .lavori-content {
-  opacity: 1;
-}
-
-.lavori-card .lavori-content h2,
-.lavori-card .lavori-content h4,
-.lavori-card .lavori-content p {
-  transition: 0.8s opacity ease-in-out;
-  opacity: 0;
-}
-
-.lavori-card:hover .lavori-content h2,
-.lavori-card:hover .lavori-content h4,
-.lavori-card:hover .lavori-content p {
   opacity: 1;
 }
 
@@ -247,7 +243,7 @@ input:-webkit-autofill:focus {
     }
 
     .lavori-content {
-      background: linear-gradient(120deg, rgba(246,211,101,0.8) 0%, rgba(253,160,133,0.8) 100%);
+      background: linear-gradient(120deg, rgba(246,211,101,0.9) 0%, rgba(253,160,133,0.9) 100%);
       opacity: 1;
     }
 
