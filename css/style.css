@@ -129,7 +129,7 @@
 .lavori-content {
   border-radius: 2px;
   opacity: 0;
-  background: linear-gradient(120deg, rgba(246,211,101,0.9) 0%, rgba(253,160,133,0.9) 100%);
+  background: linear-gradient(120deg, rgba(246,211,101,1) 0%, rgba(253,160,133,1) 100%);
   transition: 0.3s opacity ease-in-out;
   height: 100%;
   color: #37474F;
