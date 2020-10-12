@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap');
 
-.home:focus,
-.about:focus,
-.lavori:focus {
+a,
+a:focus,
+a:visited {
   outline: none !important;
   border: 0;
 }
