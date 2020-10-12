@@ -130,14 +130,11 @@ a:focus {
   border-radius: 2px;
 }
 
-.lavori-content-bg {
+.lavori-content {
+  border-radius: 2px;
   opacity: 0;
-  height: 100%;
   background: linear-gradient(120deg, rgba(246,211,101,0.9) 0%, rgba(253,160,133,0.9) 100%);
   transition: 0.3s opacity ease-in-out;
-}
-
-.lavori-content {
   height: 100%;
   color: #37474F;
   padding: 6% 4%;
@@ -159,9 +156,8 @@ a:focus {
   text-align: center;
 }
 
-.lavori-card:hover .lavori-content-bg {
+.lavori-card:hover .lavori-content {
   opacity: 1;
-  border-radius: 2px;
 }
 
 .row-about {
