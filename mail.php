@@ -30,7 +30,7 @@ if ($message === ''){
 echo "Il messaggio non può essere vuoto.";
 die();
 }
-
+}
 
 $content="From: $name \n Email: $email \n Message: $message";
 $recipient = "moglia.simone96@gmail.com";
