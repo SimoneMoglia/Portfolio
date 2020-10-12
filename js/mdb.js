@@ -12463,35 +12463,5 @@ $( document ).ready(function() {
   new WOW().init();
 });
 
-function validateForm() {
-  var name =  document.getElementById('name').value;
-  if (name == "") {
-      document.querySelector('.status').innerHTML = "Il nome non può essere vuoto.";
-      return false;
-  }
-  var email =  document.getElementById('email').value;
-  if (email == "") {
-      document.querySelector('.status').innerHTML = "L'email non può essere vuota.";
-      return false;
-  } else {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(!re.test(email)){
-          document.querySelector('.status').innerHTML = "Formato email non valido.";
-          return false;
-      }
-  }
-  var subject =  document.getElementById('subject').value;
-  if (subject == "") {
-      document.querySelector('.status').innerHTML = "L'oggetto non può essere vuoto.";
-      return false;
-  }
-  var message =  document.getElementById('message').value;
-  if (message == "") {
-      document.querySelector('.status').innerHTML = "Il messaggio non può essere vuoto.";
-      return false;
-  }
-  document.querySelector('.status').innerHTML = "Invio messaggio in corso...";
-}
-
 
 //# sourceMappingURL=mdb.min.js.map

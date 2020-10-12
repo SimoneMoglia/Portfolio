@@ -209,7 +209,7 @@
                                       <div class="col-md-12">
 
                                           <div class="md-form">
-                                              <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                              <textarea type="text" id="body" name="body" rows="2" class="form-control md-textarea"></textarea>
                                               <label for="message">Il tuo messaggio</label>
                                           </div>
 
@@ -220,7 +220,7 @@
                               </form>
 
                               <div class="btn-centered text-center text-md-left">
-                                  <a class="btn sunny-morning-gradient" onclick="validateForm();">Invia il messaggio</a>
+                                  <a class="btn sunny-morning-gradient" onclick="sendEmail();">Invia il messaggio</a>
                               </div>
                               <div class="status"></div>
                           <!--Grid column-->
@@ -270,6 +270,41 @@
           }
         }
       });
+
+      function sendEmail(){
+        var name = $("#name");
+        var email = $("#email");
+        var subject = $("#subject");
+        var body = $("#body");
+
+        if(isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)){
+          $.ajax({
+            url: 'sendEmail.php',
+            method: 'POST',""
+            dataType: 'json',
+            data: {
+              name = name.val(),
+              email = email.val(),
+              subject = subject.val(),
+              body = body.val()
+            }, success: function(response) {
+              $('#contact-form')[0].reset();
+              $('.status').text("Messaggio inviato correttamente!");
+            }
+          })
+        }
+      }
+
+      function isNotEmpty(caller) {
+        if(caller.val() == '') {
+          calls.css('border','1px solid red');
+          return false;
+        }
+        else {
+          caller.css('border','');
+          return true;
+        }
+      }
     </script>
   </body>
 </html>
