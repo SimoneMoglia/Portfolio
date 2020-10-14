@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/mdb.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Simone Moglia Portfolio</title>
+    <script src="js/convalida-email.js"></script>
   </head>
   <body>
   <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar navbar-dark">
@@ -163,70 +164,20 @@
                   <h1 class="h1-responsive text-center">Vuoi farmi<br>un saluto?</h1>
 
 
-                  <!--Section: Contact v.2-->
-                          <!--Grid column-->
-                              <form id="contact-form" name="contact-form" action="mail.php" method="POST">
 
-                                  <!--Grid row-->
-                                  <div class="row">
+                  <div>
+                    <form action="invia-email.php" method="post">
+                      <label for="nome">Nome</label>
+                      <input type="text" name="nome" id="nome">
+                      <label for="email">Email</label>
+                      <input type="text" name="email" id="email">
+                      <label for="oggetto">Oggetto</label>
+                      <input type="text" name="oggetto" id="oggetto">
+                      <label for="messaggio">Messaggio</label>
+                      <textarea name="messaggio" id="messaggio"></textarea>
 
-                                      <!--Grid column-->
-                                      <div class="col-md-6">
-                                          <div class="md-form mb-0">
-                                              <input type="text" id="name" name="name" class="form-control">
-                                              <label for="name" class="">Il tuo nome</label>
-                                          </div>
-                                      </div>
-                                      <!--Grid column-->
-
-                                      <!--Grid column-->
-                                      <div class="col-md-6">
-                                          <div class="md-form mb-0">
-                                              <input type="text" id="email" name="email" class="form-control">
-                                              <label for="email" class="">La tua e-mail</label>
-                                          </div>
-                                      </div>
-                                      <!--Grid column-->
-
-                                  </div>
-                                  <!--Grid row-->
-
-                                  <!--Grid row-->
-                                  <div class="row">
-                                      <div class="col-md-12">
-                                          <div class="md-form mb-0">
-                                              <input type="text" id="subject" name="subject" class="form-control">
-                                              <label for="subject" class="">Oggetto</label>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <!--Grid row-->
-
-                                  <!--Grid row-->
-                                  <div class="row">
-
-                                      <!--Grid column-->
-                                      <div class="col-md-12">
-
-                                          <div class="md-form">
-                                              <textarea type="text" id="body" name="body" rows="2" class="form-control md-textarea"></textarea>
-                                              <label for="message">Il tuo messaggio</label>
-                                          </div>
-
-                                      </div>
-                                  </div>
-                                  <!--Grid row-->
-
-                              </form>
-
-                              <div class="btn-centered text-center text-md-left">
-                                  <a class="btn sunny-morning-gradient" onclick="sendEmail();">Invia il messaggio</a>
-                              </div>
-                              <div class="status"></div>
-                          <!--Grid column-->
-
-
-                  <!--Section: Contact v.2-->
+                      <input type="submit" name="submit" id="submit" value="Invia Messaggio">
+                    </form>
 
 
                 </div>
@@ -241,73 +192,37 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/mdb.js"></script>
     <script>
-    // Select all links with hashes
-    $('a[href*="#"]')
-      // Remove links that don't actually link to anything
-      .not('[href="#"]')
-      .not('[href="#0"]')
-      .click(function(event) {
-        // On-page links
-        if (
-          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-          &&
-          location.hostname == this.hostname
-        ) {
-          // Figure out element to scroll to
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          // Does a scroll target exist?
-          if (target.length) {
-            // Only prevent default if animation is actually gonna happen
-            event.preventDefault();
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000, function() {
-              // Callback after animation
-              // Must change focus!
+      // Select all links with hashes
+      $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+          // On-page links
+          if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+          ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000, function() {
+                // Callback after animation
+                // Must change focus!
 
-            });
+              });
+            }
           }
-        }
-      });
+        });
 
       </script>
-      <script>
-      function sendEmail(){
-        var name = $("#name");
-        var email = $("#email");
-        var subject = $("#subject");
-        var body = $("#body");
 
-        if(isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)){
-          $.ajax({
-            url: 'sendEmail.php',
-            method: 'POST',""
-            dataType: 'json',
-            data: {
-              name = name.val(),
-              email = email.val(),
-              subject = subject.val(),
-              body = body.val()
-            }, success: function(response) {
-              $('#contact-form')[0].reset();
-              $('.status').text("Messaggio inviato correttamente!");
-            }
-          })
-        }
-      }
-
-      function isNotEmpty(caller) {
-        if(caller.val() == '') {
-          calls.css('border','1px solid red');
-          return false;
-        }
-        else {
-          caller.css('border','');
-          return true;
-        }
-      }
-    </script>
-    
   </body>
 </html>
