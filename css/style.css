@@ -222,7 +222,7 @@
 .form-ciao label,
 .form-ciao-row label {
   color: #F6D365;
-  margin: 1% 0 0 4px;
+  margin: 5px 0 0 4px;
   font-weight: 500;
 }
 
@@ -231,7 +231,7 @@
 .form-ciao textarea {
   background: #37474F;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   border-bottom: 1px solid #F2F2F2;
   margin-bottom: 1%;
   padding: 8px;
@@ -267,7 +267,7 @@
 
 .btn-centered {
   margin: 3% auto;
-  width: 50%;
+  width: 65%;
 }
 
 input:-webkit-autofill {
