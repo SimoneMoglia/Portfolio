@@ -10,6 +10,7 @@ if (isset($_POST["submit"]))
   $header = "Da $email" . "Nome: $nome";
   $subject = "$oggetto";
   $indirizzo = "moglia.simone96@gmail.com";
+  
 
 
 
