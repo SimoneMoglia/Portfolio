@@ -236,7 +236,8 @@
   margin-bottom: 1%;
   padding: 8px;
   color: #F2F2F2;
-  font-weight: 300
+  font-weight: 300;
+  transition: 0.3s border ease-in-out;
 }
 
 ::placeholder {
@@ -261,6 +262,7 @@
 .form-ciao input:focus,
 .form-ciao textarea:focus {
   outline: none;
+  border: 1px solid #F6D365;
 }
 
 .btn-centered {
