@@ -162,24 +162,27 @@
                 <div class="dimmi-ciao">
                   <h1 class="h1-responsive text-center">Vuoi farmi<br>un saluto?</h1>
 
-
-
-                  <div>
+                  <div class="form-ciao">
                     <form action="https://api.formcake.com/api/form/2d7a9b9e-9434-438a-a124-b7f3929751d2/submission" method="post">
-                      <label for="nome">Nome</label>
-                      <input type="text" name="nome" id="nome">
-                      <label for="email">Email</label>
-                      <input type="text" name="email" id="email">
+
+                      <div class="form-ciao-first">
+                        <div class="form-ciao-row">
+                          <label for="nome">Nome</label>
+                          <input type="text" name="nome" id="nome" placeholder="Il tuo nome">
+                        </div>
+                        <div class="form-ciao-row">
+                          <label for="email">Email</label>
+                          <input type="email" name="email" id="email" placeholder="La tua email">
+                        </div>
+                      </div>
                       <label for="oggetto">Oggetto</label>
-                      <input type="text" name="oggetto" id="oggetto">
+                      <input type="text" name="oggetto" id="oggetto" placeholder="L'oggetto del messaggio">
                       <label for="messaggio">Messaggio</label>
-                      <textarea name="messaggio" id="messaggio"></textarea>
+                      <textarea name="messaggio" id="messaggio" rows="2" placeholder="Scrivi il messaggio"></textarea>
 
-                      <input type="submit" name="submit" id="submit" value="Invia Messaggio">
+                      <button type="submit" class="sunny-morning-gradient btn-centered btn">Invia Messaggio</button>
                     </form>
-
-
-                </div>
+                  </div>
 
               </div>
             </div>
