@@ -266,7 +266,7 @@
 }
 
 .btn-centered {
-  margin: 5px auto;
+  margin: 10px auto;
   width: 50%;
 }
 
@@ -386,7 +386,6 @@ input:-webkit-autofill:focus {
   }
 
   .btn-centered {
-    margin: 5px auto;
     width: 65%;
   }
 }
