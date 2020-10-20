@@ -395,11 +395,12 @@ input:-webkit-autofill:focus {
     }
 
     .form-ciao {
-      width: 100%;
+      width: 100vw;
+      position: absolute;
+      left: 0;
       margin: 0 auto;
-      
-    }
 
+    }
 }
 
 @media (min-width: 992px) {
