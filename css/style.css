@@ -246,8 +246,6 @@
 .form-ciao {
   margin-top: 5%;
   background: #37474F;
-  width: 100vw;
-  margin: 0 auto;
 }
 
 .form-ciao form {
@@ -394,6 +392,12 @@ input:-webkit-autofill:focus {
       position: relative;
       right: 0;
       bottom: 0;
+    }
+
+    .form-ciao {
+      width: 100%;
+      margin: 0 auto;
+      
     }
 
 }
