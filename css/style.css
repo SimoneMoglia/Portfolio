@@ -391,7 +391,6 @@ input:-webkit-autofill:focus {
       position: relative;
       right: 0;
       bottom: 0;
-      height: 150vh;
     }
 
 }
@@ -428,8 +427,5 @@ input:-webkit-autofill:focus {
 
   .btn-centered {
     width: 65%;
-  }
-  .ciao {
-    height: 100vh;
   }
 }
