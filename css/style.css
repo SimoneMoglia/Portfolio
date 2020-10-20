@@ -366,6 +366,16 @@ input:-webkit-autofill:focus {
       height: 100vh;
     }
 
+    .lavori-card a {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lavori-img-container {
+      width: 100%;
+      height: 30%;
+    }
+
     .lavori-content p {
       font-size: 0.9rem;
     }
