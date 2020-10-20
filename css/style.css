@@ -376,6 +376,10 @@ input:-webkit-autofill:focus {
       height: 30%;
     }
 
+    .lavori-content {
+      width: 100%
+    }
+
     .lavori-content p {
       font-size: 0.9rem;
     }
