@@ -246,6 +246,7 @@
 .form-ciao {
   margin-top: 5%;
   background: #37474F;
+  width: 100vw;
 }
 
 .form-ciao form {
